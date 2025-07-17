@@ -7,18 +7,18 @@ ZSH_THEME="intheloop"
 zstyle ':omz:update' mode auto
 zstyle ':completion:*' menu select
 
-ENABLE_CORRECTION="true"
+DISABLE_CORRECTION="true"
 
 COMPLETION_WAITING_DOTS="true"
 
 # Plugins
 plugins=(
+  git
+  zsh-z
   zsh-autosuggestions
   zsh-syntax-highlighting
   zsh-history-substring-search
-  git
   sudo
-  z
   docker
   docker-compose
   copyfile
@@ -26,12 +26,19 @@ plugins=(
   command-not-found
   colored-man-pages
   extract
+  alias-finder
+  aliases
+  colorize
+  history
+  vscode
+  you-should-use
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias zshconfig="nvim ~/.zshrc"
+alias bashconfig="nvim ~/.bashrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias c="clear"
 alias g="git"
